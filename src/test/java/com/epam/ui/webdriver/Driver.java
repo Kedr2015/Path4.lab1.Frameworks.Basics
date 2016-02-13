@@ -9,6 +9,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.epam.exception.UnknownDriverTypeException;
 
+/**
+ * @author kedr
+ *
+ *         Working with the driver and browsers
+ */
 public class Driver {
 
     private static final String DEFAULT_WEB_DRIVER = "DEFAULT_WEB_DRIVER";
@@ -19,6 +24,15 @@ public class Driver {
 	instances = new HashMap<String, WebDriver>();
     }
 
+    /**
+     * @param name
+     *            browser
+     * @param driverType
+     *            browser
+     * @return driver - browser instance
+     * 
+     *         browser instance creation
+     */
     public static WebDriver getWebDriverInstances(String name, DriverTypes driverType) {
 	WebDriver driver;
 	if (!instances.containsKey(name)) {
@@ -43,10 +57,23 @@ public class Driver {
 	return driver;
     }
 
+    /**
+     * @param name
+     *            browser
+     * @return driver - browser instance
+     * 
+     *         browser instance creation, DriverTypes -defaultDriverType
+     */
     public static WebDriver getWebDriverInstance(String name) {
 	return getWebDriverInstances(name, defaultDriverType);
     }
 
+    /**
+     * @return driver - browser instance
+     * 
+     *         browser instance creation, DriverTypes -defaultDriverType, and
+     *         browser -default
+     */
     public static WebDriver getWebDriverInstance() {
 	return getWebDriverInstances(DEFAULT_WEB_DRIVER, defaultDriverType);
     }

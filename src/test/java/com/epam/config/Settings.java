@@ -4,6 +4,11 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.kohsuke.args4j.Option;
 
+/**
+ * @author kedr
+ *
+ *         In this class, the processing console commands are
+ */
 public class Settings {
     @Option(name = "--testng", usage = "seth path to TestNG xml", required = true)
     public String testNgPath;

@@ -9,6 +9,11 @@ import org.testng.xml.XmlSuite;
 import com.epam.config.Settings;
 import com.epam.exception.TestNgRunException;
 
+/**
+ * @author kedr
+ * 
+ *         Processing Startup Options
+ */
 public class Runner {
 
     protected TestNG testng = new TestNG();

@@ -1,5 +1,10 @@
 package com.epam.ui.webdriver;
 
+/**
+ * @author kedr
+ *
+ *         Enumeration used browsers
+ */
 public enum DriverTypes {
 
     FIREFOX("firefox"), CHROME("chrome");

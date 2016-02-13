@@ -25,8 +25,6 @@ public class BaseTest {
     /**
      * Driver selection
      * 
-     * @param name
-     *            browser
      */
     public void driverSelection() {
 	driver = Driver.getWebDriverInstance();
@@ -52,7 +50,7 @@ public class BaseTest {
     }
 
     @Test
-    public void test1() {
+    public void authorizationCheck() {
 	System.out.println("Checking login to the system.");
 	boolean openMainPage = new LoginPage(driver).loginMetod(XmlUtils.initializationUser(file)).IsExitButon();
 	Assert.assertTrue(openMainPage, "Login not implemented");
